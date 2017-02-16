@@ -1,0 +1,13 @@
+---
+layout: group
+title: Women's Email Newsletters
+permalink: /women/
+---
+
+<ul>
+	{% for newsletter in site.newsletters %}
+	  <li>
+	    <a href="{{ newsletter.permalink | prepend: site.baseurl }}">{{ newsletter.title }}</a>
+	  </li>
+	{% endfor %}
+</ul>
