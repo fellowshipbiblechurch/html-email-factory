@@ -1,1 +1,17 @@
-{{ content }}
+<!DOCTYPE html>
+<html>
+	<head>
+	</head>
+	<body>
+		<h1>{{ page.title }}</h1>
+		<ul>
+			{% for newsletter in site.newsletters  %}
+				{% if newsletter.category == page.group %}
+				  <li>
+				    <a href="{{ newsletter.url | prepend: site.baseurl }}">{{ newsletter.title }}</a>
+				  </li>
+				{% endif %}
+			{% endfor %}
+		</ul>
+	</body>
+</html>
