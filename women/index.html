@@ -4,13 +4,3 @@ title: Women's Email Newsletters
 permalink: /women/
 group: women
 ---
-
-<ul>
-	{% for newsletter in site.newsletters  %}
-		{% if newsletter.category == page.group %}
-		  <li>
-		    <a href="{{ newsletter.url | prepend: site.baseurl }}">{{ newsletter.title }}</a>
-		  </li>
-		{% endif %}
-	{% endfor %}
-</ul>

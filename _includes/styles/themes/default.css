@@ -1,0 +1,89 @@
+---
+---
+
+/* DEFAULT THEME STYLES */
+
+body, #bodyTable {
+	background-color:#fff;
+}
+
+/* CONTAINERS */
+
+#emailContainer {
+	background-color: #fff;
+}
+
+#heroImageContainer {
+	background-color:#F0F0F0;
+}
+
+#headerContainer {
+	background-color: #{{ page.header_bg_color }};
+}
+
+#dateContainer {
+	padding: {{ layout.content_padding }}px {{ layout.content_padding }}px 0;
+}
+
+#introContainer,
+#contactContainer,
+#footerContainer {
+	padding: {{ layout.content_padding }}px;
+}
+
+#introContainer {
+	background-color: #fff;
+}
+
+#callToActionContainer {
+	background-color: #D83826;
+}
+
+#eventContainer {
+	background-color: #F0F0F0;
+}
+
+#merchandiseContainer {
+	background-color: #F0F0F0;
+}
+
+#footerContainer {
+}
+
+/* BLOCKS */
+
+
+
+/* BLOCK CELLS */
+
+#ruleBlockCell {
+	border-top: 1px solid #e7e7e7;
+	font-size: 0;
+	line-height: 0;
+}
+
+#contactBlockCellPhoto {
+	padding-right: {{ layout.content_padding }}px;
+}
+
+#contactBlockCellName {
+}
+
+#footerBlockCell {
+	padding-bottom: 18px;
+}
+
+
+/* OTHER */
+
+.content {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 18px;
+	font-weight: normal;
+	color: #313030;
+	line-height: 1.4;
+}
+
+#dateContainer .content {
+	font-size: 14px;
+}

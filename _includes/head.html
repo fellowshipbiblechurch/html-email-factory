@@ -2,5 +2,17 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<title></title>
   <style type="text/css">
+		{% include styles/reset.css %}
+		{% include styles/client.css %}
+		{% include styles/base.css %}
+		
+		{% if page.layout == 'home' %}
+			{% include styles/home.css %}
+		{% elsif page.layout == 'group' %}
+			{% include styles/group.css %}
+		{% elsif page.layout == 'default' %}
+			{% include styles/themes/default.css %}
+		{% endif %}
+		
 	</style>
 </head>
