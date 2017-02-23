@@ -8,22 +8,31 @@
 						<table border="0" cellpadding="0" cellspacing="0">
               <tbody>
 	              <tr>
+		              
 		              {% if page.author_image_url != false %}
+		              	{% assign nameBlockWidth = 450 %}
 			              <td align="left" valign="middle" width="90" id="contactBlockCellPhoto">
 				              <a href="mailto:{{ page.author_email }}">
 					              <img width="90" src="{{ page.author_image_url }}" alt="{{ page.author }}">
 				              </a>
 			              </td>
+			            {% else %}
+			            	{% assign nameBlockWidth = '100%' %}
 			            {% endif %}
-		              <td align="left" valign="middle" width="450" id="contactBlockCellName" class="content">
+			            
+		              <td align="left" valign="middle" width="{{ nameBlockWidth }}" id="contactBlockCellName" class="content">
 										<h4>
 											<a style="text-decoration: none;" href="mailto:{{ page.author_email }}">
 												{{ page.author }}
 											</a>
 										</h4>
-										{{ page.author_position }}
-										<br>
-										{{ page.author_campus }}
+										{% if page.author_position %}
+											{{ page.author_position }}
+											<br>
+										{% endif %}
+										{% if page.author_campus %}
+											{{ page.author_campus }}
+										{% endif %}
 		              </td>
 	              </tr>
               </tbody>

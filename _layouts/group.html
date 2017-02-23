@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html>
-  {% include head.html %}
+  {% include scaffold/head.html %}
 	<body>
-		<h1>{{ page.title }}</h1>
-		
-		<ul>
-			{% for newsletter in site.newsletters %}
-				{% for category in newsletter.categories %}
-					{% if category == page.group | strip %}
-					  <li>
-					    <a href="{{ newsletter.url | prepend: site.baseurl }}">{{ newsletter.title }}</a>
-					  </li>
-					{% endif %}
+		<header>
+			<h2>{{ page.title }}</h2>
+		</header>
+		<nav role="navigation">
+			<ul>
+				{% for newsletter in site.newsletters %}
+					{% for category in newsletter.categories %}
+						{% if category == page.group | strip %}
+						  <li>
+						    <a href="{{ newsletter.url | prepend: site.baseurl }}">{{ newsletter.title }}</a>
+						  </li>
+						{% endif %}
+					{% endfor %}
 				{% endfor %}
-			{% endfor %}
-		</ul>
-		
+			</ul>
+		</nav>		
 	</body>
 </html>

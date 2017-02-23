@@ -6,7 +6,7 @@ content_width: 540
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html>
-  {% include head.html %}
+  {% include scaffold/head.html %}
   <body>
   	<center>
   		<table border="0" cellpadding="0" cellspacing="0" height="100%" width="100%" id="bodyTable">
@@ -16,17 +16,15 @@ content_width: 540
 				  		<table border="0" cellpadding="0" cellspacing="0" width="100%" id="emailContainer">
 					  		<tbody>
 						  		
-									{% include header.html %}
+									{% include scaffold/header.html %}
 						  		
-									{% include date.html %}
+									{% include scaffold/date.html %}
 						  		
 									{{ content }}
 									
-									{% include author.html %}
-									
 									{% include snippets/horizontal-rule.html %}
 									
-							    {% include footer.html %}
+							    {% include scaffold/footer.html %}
 							    
 					  		</tbody>
 				  		</table>

@@ -1,31 +1,28 @@
 <!DOCTYPE html>
 <html>
-  {% include head.html %}
+  {% include scaffold/head.html %}
 	<body>
-		<h1>{{ page.title }}</h1>
-		<ul>
-			<li>
-				<a href="/fellowship">Fellowship</a>
-			</li>
-			<li>
-				<a href="/brentwood">Brentwood</a>
-			</li>
-			<li>
-				<a href="/franklin">Franklin</a>
-			</li>
-			<li>
-				<a href="/men">Men</a>
-			</li>
-			<li>
-				<a href="/women">Women</a>
-			</li>
-<!--
-			{% for category in newsletters.categories  %}
-			  <li>
-			    <a href="{{ category | prepend: site.baseurl }}">{{ category }}</a>
-			  </li>
-			{% endfor %}
--->
-		</ul>
+		<header>
+			<h2>{{ page.title }}</h2>
+		</header>
+		<nav role="navigation">
+			<ul>
+				<li>
+					<a href="/fellowship">Fellowship</a>
+				</li>
+				<li>
+					<a href="/brentwood">Brentwood</a>
+				</li>
+				<li>
+					<a href="/franklin">Franklin</a>
+				</li>
+				<li>
+					<a href="/men">Men</a>
+				</li>
+				<li>
+					<a href="/women">Women</a>
+				</li>
+			</nav>
+		</main>
 	</body>
 </html>

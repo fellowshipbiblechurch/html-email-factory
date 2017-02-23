@@ -1,0 +1,30 @@
+/* HOME PAGE STYLES */
+
+body {
+	height: 100%;
+	max-width: 75%;
+	margin: 0 auto;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: 300;
+	font-size: 1.333em;
+	color: #313030;
+	background-color: #f7f7f7;
+}
+
+header {
+	padding: 38px 0;
+}
+
+nav ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	color: #a9aa29;
+}
+
+a:visited {
+	color: #a9aa29;
+}
