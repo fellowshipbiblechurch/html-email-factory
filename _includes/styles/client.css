@@ -47,3 +47,11 @@ blockquote {
 	-ms-text-size-adjust:100%;
 	-webkit-text-size-adjust:100%;
 }
+
+@media only screen and (max-width: 480px) {
+	/* Force iOS Mail to render the email at full width. */
+	body {
+		width:100% !important;
+		min-width:100% !important;
+	}
+}

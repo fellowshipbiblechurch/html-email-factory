@@ -1,0 +1,16 @@
+{
+  "name": "Emails",
+  "version": "1.0.0",
+  "description": "Emails",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "inline-css": "npm run inline-css",
+    "build": "jekyll build --watch"
+  },
+  "author": "Matt Brock",
+  "license": "ISC",
+  "dependencies": {
+    "inline-css": "^2.2.2"
+  }
+}

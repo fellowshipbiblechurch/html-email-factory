@@ -1,0 +1,37 @@
+<tr>
+	<!-- BEGIN CONTACT -->
+	<td align="center" valign="top" id="contactContainer">
+		<table border="0" cellpadding="0" cellspacing="0" width="{{ layout.content_width }}" id="contactBlock">
+			<tbody>
+				<tr>
+					<td align="left" valign="top" id="contactBlockCell">
+						<table border="0" cellpadding="0" cellspacing="0">
+              <tbody>
+	              <tr>
+		              {% if page.author_image_url != false %}
+			              <td align="left" valign="middle" width="90" id="contactBlockCellPhoto">
+				              <a href="mailto:{{ page.author_email }}">
+					              <img width="90" src="{{ page.author_image_url }}" alt="{{ page.author }}">
+				              </a>
+			              </td>
+			            {% endif %}
+		              <td align="left" valign="middle" width="450" id="contactBlockCellName" class="content">
+										<h4>
+											<a style="text-decoration: none;" href="mailto:{{ page.author_email }}">
+												{{ page.author }}
+											</a>
+										</h4>
+										{{ page.author_position }}
+										<br>
+										{{ page.author_campus }}
+		              </td>
+	              </tr>
+              </tbody>
+						</table>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</td>
+	<!-- END CONTACT -->
+</tr>
