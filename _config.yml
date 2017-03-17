@@ -28,7 +28,7 @@ permalink: pretty
 collections:
  newsletters:
   output: true
-  permalink: /:categories/:title.html
+  permalink: /:collection/:categories/:title.html
 
 # Default settings
 defaults:
@@ -39,3 +39,5 @@ defaults:
   values:
    author: Fellowship Bible Church
    layout: "default"
+   published: true
+   future: false

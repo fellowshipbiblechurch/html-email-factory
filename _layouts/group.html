@@ -1,3 +1,6 @@
+---
+---
+
 <!DOCTYPE html>
 <html>
   {% include scaffold/head.html %}
@@ -5,18 +8,21 @@
 		<header>
 			<h2>{{ page.title }}</h2>
 		</header>
+		<h5>Newsletters matching: {{ page.group }}</h5>
 		<nav role="navigation">
 			<ul>
 				{% for newsletter in site.newsletters %}
 					{% for category in newsletter.categories %}
-						{% if category == page.group | strip %}
+						<h6 style="margin:0">cat: {{ category }}</h6>
+<!-- 						{% if category == page.group | strip %} -->
 						  <li>
 						    <a href="{{ newsletter.url | prepend: site.baseurl }}">{{ newsletter.title }}</a>
 						  </li>
-						{% endif %}
+<!-- 						{% endif %} -->
 					{% endfor %}
+					<br>
 				{% endfor %}
 			</ul>
-		</nav>		
+		</nav>
 	</body>
 </html>

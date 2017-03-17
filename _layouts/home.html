@@ -1,3 +1,6 @@
+---
+---
+
 <!DOCTYPE html>
 <html>
   {% include scaffold/head.html %}
@@ -5,27 +8,29 @@
 		<header>
 			<h2>{{ page.title }}</h2>
 		</header>
+		<div>
+			{% for newsletter in site.newsletters %}
+				<h6 style="margin:0">{{ newsletter.title }}</h6>
+			{% endfor %}
+		</div>
+		
+		<br>
+		<div>
+			{% for category in site.newsletters.categories %}
+				<h6 style="margin:0">{{ category.title }}</h6>
+			{% endfor %}
+		</div>
+		
+		<br>
 		<nav role="navigation">
 			<ul>
-				<li>
-					<a href="/fellowship">Fellowship</a>
-				</li>
-				<li>
-					<a href="/brentwood">Brentwood</a>
-				</li>
-				<li>
-					<a href="/franklin">Franklin</a>
-				</li>
-				<li>
-					<a href="/men">Men</a>
-				</li>
-				<li>
-					<a href="/women">Women</a>
-				</li>
-				<li>
-					<a href="/kids">Kids</a>
-				</li>
-			</nav>
+				{% for page in site.pages %}
+				  <li>
+				    <a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+				  </li>
+				{% endfor %}
+			</ul>
+		</nav>
 		</main>
 	</body>
 </html>
