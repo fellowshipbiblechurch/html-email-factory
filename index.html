@@ -2,14 +2,3 @@
 layout: home
 title: Fellowship Newsletters
 ---
-
-{% for newsletter in site.newsletters %}
-	{% for category in newsletter.categories %}
-		<h6 style="margin:0">cat: {{ category }}</h6>
-<!-- 						{% if category == page.group | strip %} -->
-		  <li>
-		    <a href="{{ newsletter.url | prepend: site.baseurl }}">{{ newsletter.title }}</a>
-		  </li>
-<!-- 						{% endif %} -->
-	{% endfor %}
-{% endfor %}

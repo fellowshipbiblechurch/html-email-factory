@@ -93,7 +93,7 @@ a {
 }
 
 .callToActionButtonContent {
-	padding: {{ layout.content_padding | divided_by: 1.333 }}px {{ layout.content_padding | times: 1.333 }}px;
+	padding: {{ layout.content_padding | divided_by: 1.333 }}px {{ layout.content_padding | times: 2.1 }}px;
 }
 
 .callToActionButtonContent a {

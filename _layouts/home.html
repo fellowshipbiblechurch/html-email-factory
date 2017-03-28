@@ -8,29 +8,25 @@
 		<header>
 			<h2>{{ page.title }}</h2>
 		</header>
-		<div>
-			{% for newsletter in site.newsletters %}
-				<h6 style="margin:0">{{ newsletter.title }}</h6>
-			{% endfor %}
-		</div>
-		
-		<br>
-		<div>
-			{% for category in site.newsletters.categories %}
-				<h6 style="margin:0">{{ category.title }}</h6>
-			{% endfor %}
-		</div>
-		
-		<br>
 		<nav role="navigation">
 			<ul>
 				{% for page in site.pages %}
-				  <li>
-				    <a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
-				  </li>
+					{% if page.layout == "group" %}
+					  <li>
+					    <a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+					  </li>
+					{% endif %}
 				{% endfor %}
 			</ul>
 		</nav>
 		</main>
 	</body>
 </html>
+
+<!--
+{% for a in site.data.authors %}
+  <li>
+    {{ a }}
+  </li>
+{% endfor %}
+-->

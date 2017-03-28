@@ -1,3 +1,10 @@
+{% assign author = site.data.authors[page.author] %}
+{% assign name = author.name %}
+{% assign email = author.email %}
+{% assign position = author.position %}
+{% assign campus = author.campus %}
+{% assign image = author.image %}
+
 <tr>
 	<!-- BEGIN CONTACT -->
 	<td align="center" valign="top" id="contactContainer">
@@ -8,12 +15,11 @@
 						<table border="0" cellpadding="0" cellspacing="0">
               <tbody>
 	              <tr>
-		              
-		              {% if page.author_image_url != false %}
+		              {% if author.image_url != false %}
 		              	{% assign nameBlockWidth = 450 %}
 			              <td align="left" valign="middle" width="90" id="contactBlockCellPhoto">
-				              <a href="mailto:{{ page.author_email }}">
-					              <img width="90" src="{{ page.author_image_url }}" alt="{{ page.author }}">
+				              <a href="mailto:{{ email }}">
+					              <img width="90" src="{{ image }}" alt="{{ name }}, {{ position }}">
 				              </a>
 			              </td>
 			            {% else %}
@@ -22,16 +28,16 @@
 			            
 		              <td align="left" valign="middle" width="{{ nameBlockWidth }}" id="contactBlockCellName" class="content">
 										<h4>
-											<a style="text-decoration: none;" href="mailto:{{ page.author_email }}">
-												{{ page.author }}
+											<a style="text-decoration: none;" href="mailto:{{ email }}">
+												{{ name }}
 											</a>
 										</h4>
-										{% if page.author_position %}
-											{{ page.author_position }}
+										{% if position %}
+											{{ position }}
 											<br>
 										{% endif %}
-										{% if page.author_campus %}
-											{{ page.author_campus }}
+										{% if campus %}
+											{{ campus }}
 										{% endif %}
 		              </td>
 	              </tr>

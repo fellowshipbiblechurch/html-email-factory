@@ -1,0 +1,31 @@
+# Author details
+abraham_lincoln:
+ name: "Abraham Lincoln"
+ email: "abe@fbctn.org"
+ position: "President of the United States"
+ campus: "Washington, D.C."
+ image: "http://fellowshipbiblechurch.org/email-assets/headshots/boilerplate-abraham-lincoln-300px.png"
+elisabeth_cutrer:
+ name: "Elisabeth Cutrer"
+ email: "ecutrer@fbctn.org"
+ position: "Director of Fellowship Women"
+ campus: "Brentwood Campus"
+ image: "http://fbctnmedia.org/email-assets/headshots/staff-elisabeth-cutrer-circle-220px.png"
+mark_irving:
+ name: "Mark Irving"
+ email: "mirving@fbctn.org"
+ position: "Pastor of Discipleship & Men’s Ministry"
+ campus: "Brentwood Campus"
+ image: "http://fellowshipbiblechurch.org/email-assets/headshots/staff-mark-irving-300px.png"
+paige_stroup:
+ name: "Paige Stroup"
+ email: "pstroup@fbctn.org"
+ position: "Director of Community Life & Women's Discipleship"
+ campus: "Franklin Campus"
+ image: false
+rob_eric_jj:
+ name: "Rob, Eric, and JJ"
+ email: "rsweet@fbctn.org"
+ position: "Franklin Campus Pastors"
+ campus: false
+ image: false
