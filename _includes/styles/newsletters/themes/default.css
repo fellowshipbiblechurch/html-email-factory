@@ -119,7 +119,7 @@ a {
 
 /* MOBILE STYLES */
 
-@media only screen and (max-width: 480px){
+@media only screen and (max-width: 600px){
 	
 	td[id="preHeaderContainer"],
 	td[id="dateContainer"],
