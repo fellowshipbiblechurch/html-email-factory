@@ -3,10 +3,12 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 	<title></title>
   <style type="text/css">
+    
+    {% assign l = page.layout %}
 		
-		{% if page.layout == 'home' or page.layout == 'group' %}
+		{% if l == 'home' or l == 'group' %}
 			{% include styles/pages/base.css %}
-		{% elsif page.layout == 'default' %}
+		{% elsif l == 'default' or l == 'paper' %}
 			{% include styles/newsletters/reset.css %}
 			{% include styles/newsletters/client.css %}
 			{% include styles/newsletters/base.css %}

@@ -17,13 +17,17 @@ a {
 	background-color: #fff;
 }
 
-#headerContainer {
-	background-color: {{ page.header_bg_color }};
-}
+{% if page.header_full_width %}
+  #headerContainer {
+  	background-color: {{ page.header_bg_color }};
+  }
+{% endif %}
 
-#dateContainer {
-	border-top: 4px solid {{ page.color_theme_primary }}
-}
+{% if page.header_has_border %}
+  #dateContainer {
+  	border-top: 4px solid {{ page.color_theme_primary }}
+  }
+{% endif %}
 
 #heroImageContainer {
 	background-color: #F0F0F0;
@@ -40,6 +44,7 @@ a {
 #preHeaderContainer,
 #dateContainer,
 #textContainer,
+#eventContainer,
 #contactContainer,
 #footerContainer,
 #ruleContainer,
@@ -114,6 +119,32 @@ a {
 	font-size: 14px;
 	color: #a2a2a2;
 	font-style: italic;
+}
+
+.list-header {
+  padding: 0 1px;
+  font-size: 12px;
+  font-weight: normal;
+  font-style: italic;
+  color: #67a7a8;
+  border-bottom: 2px solid #67a7a8;
+}
+
+.event-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 12px 0 6px;
+}
+
+.event-details {
+  margin: 0 0 38px;
+  padding-left: 21px;
+  font-size: 14px;
+  list-style-type: square;
+}
+
+.margin-clear {
+  margin: 0;
 }
 
 
