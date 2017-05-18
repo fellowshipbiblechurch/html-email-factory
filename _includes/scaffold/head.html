@@ -2,6 +2,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 	<title></title>
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
   <style type="text/css">
     
     {% assign l = page.layout %}
@@ -9,10 +10,10 @@
 		{% if l == 'home' or l == 'group' %}
 			{% include styles/pages/base.css %}
 		{% elsif l == 'default' or l == 'paper' %}
-			{% include styles/newsletters/reset.css %}
-			{% include styles/newsletters/client.css %}
-			{% include styles/newsletters/base.css %}
-			{% include styles/newsletters/themes/default.css %}
+			{% include styles/newsletters/core/reset.css %}
+			{% include styles/newsletters/core/client.css %}
+			{% include styles/newsletters/core/base.css %}
+			{% include styles/newsletters/themes/theme-{{ l }}.css %}
 		{% endif %}
 		
 	</style>

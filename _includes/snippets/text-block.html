@@ -1,0 +1,25 @@
+{% if layout == 'default' %}
+  {% assign default_padding = layout.content_padding | append: 'px' %}
+{% elsif layout == 'paper' %}
+  {% assign default_padding = layout.content_padding | append: 'px 0px' %}
+{% endif %}
+
+{% assign include_name = include.name | default: "text" %}
+{% assign include_align_container = include.align_container | default: "center" %}
+{% assign include_align_content = include.align_content | default: "left" %}
+
+<tr>
+	<!-- BEGIN {{ include_name | upcase }} -->
+	<td align="{{ include_align_container }}" valign="top" id="{{ include_name }}Container">
+		<table border="0" cellpadding="0" cellspacing="0" width="{{ layout.content_width }}" id="{{ include_name }}Block">
+			<tbody>
+				<tr>
+					<td align="{{ include_align_content }}" valign="top" class="content" id="{{ include_name }}BlockCell">
+            {{ include.content | default: "Please supply some content for this text block." }}
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</td>
+	<!-- END {{ include_name | upcase }} -->
+</tr>

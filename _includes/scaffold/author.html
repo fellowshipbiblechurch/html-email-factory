@@ -15,11 +15,11 @@
 						<table border="0" cellpadding="0" cellspacing="0">
               <tbody>
 	              <tr>
-		              {% if author.image_url != false %}
+		              {% if image != false %}
 		              	{% assign nameBlockWidth = 450 %}
 			              <td align="left" valign="middle" width="90" id="contactBlockCellPhoto">
-				              <a href="mailto:{{ email }}">
-					              <img width="90" src="{{ image }}" alt="{{ name }}, {{ position }}">
+				              <a href="mailto:{{ email }}" title="Email {{ name }}">
+					              <img width="90" src="{{ image }}" alt="{{ name }}, {{ campus }} {{ position }}">
 				              </a>
 			              </td>
 			            {% else %}
@@ -28,7 +28,7 @@
 			            
 		              <td align="left" valign="middle" width="{{ nameBlockWidth }}" id="contactBlockCellName" class="content">
 										<h4>
-											<a style="text-decoration: none;" href="mailto:{{ email }}">
+											<a style="text-decoration: none;" href="mailto:{{ email }}" title="Email {{ name }}">
 												{{ name }}
 											</a>
 										</h4>

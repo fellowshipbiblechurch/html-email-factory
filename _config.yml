@@ -14,7 +14,7 @@ description: > # this means to ignore newlines until "baseurl:"
   Google search results) and in your feed.xml site description.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://www.fellowshipbiblechurch.org" # the base hostname & protocol for your site
-logo_url: "http://www.fellowshipbiblechurch.org/F1_images/fbc_blk_300px.png"
+logo_url: "http://1a35adac855f40326ab5-545fc5a361402074649dd8b0f6e40b7d.r37.cf2.rackcdn.com/uploaded/f/0e6222796_1495038121_fbc-logo-360px-hex-414141.png"
 logo_width: 180
 logo_height: 60
 twitter_username: fbctn

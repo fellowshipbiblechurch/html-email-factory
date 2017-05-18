@@ -1,8 +1,14 @@
+{% if page.layout == 'default' %}
+  {% assign header_width = layout.content_width %}
+{% elsif page.layout == 'paper' %}
+  {% assign header_width = layout.email_width %}
+{% endif %}
+
 <tr>
 	<!-- BEGIN HEADER -->
-	<td align="center" valign="top" id="headerContainer" width="100%" height="{{ page.header_image_height }}">
+	<td align="center" valign="top" id="headerContainer" width="{{ header_width }}" height="{{ page.header_image_height }}">
 		<a class="imageLink" href="{{ page.header_image_link }}" title="{{ page.title_public }}">
-			<img src="{{ page.header_image_url }}" width="{{ layout.email_width }}" height="{{ page.header_image_height }}" id="headerImage" />
+			<img src="{{ page.header_image_url }}" width="{{ header_width }}" height="{{ page.header_image_height }}" id="headerImage" />
 		</a>
 	</td>
 	<!-- END HEADER -->

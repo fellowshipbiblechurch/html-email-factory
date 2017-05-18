@@ -9,29 +9,59 @@ content_width: 540
   {% include scaffold/head.html %}
   <body>
   	<center>
+  	  
+  	  {% if page.email_client_lede %}
+    	  <table id="hiddenContainer">
+      	  <tbody>
+        	  <tr>
+          	  <td>{{ page.email_client_lede }}</td>
+        	  </tr>
+      	  </tbody>
+    	  </table>
+      {% endif %}
+      
   		<table border="0" cellpadding="0" cellspacing="0" height="100%" width="100%" id="bodyTable">
 	  		<tbody>
 		  		<tr>
 			  		<td align="center" valign="top" id="bodyCell">
-				  		<table border="0" cellpadding="0" cellspacing="0" width="100%" id="emailContainer">
+				  		<table border="0" cellpadding="0" cellspacing="0" width="{{ layout.email_width }}" id="emailContainer">
 					  		<tbody>
-						  		
+  					  		
 									{% include scaffold/header.html %}
-						  		
-									{% include scaffold/date.html %}
-						  		
-									{{ content }}
-							    
-							    {% include scaffold/author.html %}
-									
-									{% include snippets/horizontal-rule.html %}
-									
-							    {% include scaffold/footer.html %}
-							    
+  					  		
+  					  		<tr>
+    					  		<td align="center" valign="top" id="paperContainer" width="{{ layout.email_width }}">
+        				  		<table border="0" cellpadding="0" cellspacing="0" width="100%" id="paperBlock">
+        					  		<tbody>
+        							    
+      							      {% if page.pre_date_markup %}
+      							        {%include snippets/text-block.html content=page.pre_date_markup %}
+      							        {%include snippets/horizontal-rule.html padding='0' %}
+      							      {% endif %}
+        						  		
+        									{% include snippets/text-block.html content=page.date_to_send name="date" align_content="right" %}
+        						  		
+        									{{ content }}
+        							    
+        							    {% include scaffold/author.html %}
+        							    
+      							      {% if page.post_script_markup %}
+      							        {%include snippets/horizontal-rule.html padding='0' %}
+      							        {%include snippets/text-block.html content=page.post_script_markup %}
+      							      {% endif %}
+        							    
+        					  		</tbody>
+        				  		</table>
+    					  		</td>
+  					  		</tr>
 					  		</tbody>
 				  		</table>
 			  		</td>
 		  		</tr>
+		  		
+			    {% include scaffold/footer.html %}
+			    
+	  		</tbody>
   		</table>
   	</center>
 	</body>

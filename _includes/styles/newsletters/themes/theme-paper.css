@@ -1,0 +1,72 @@
+/*	#	Paper theme override styles
+================================================== */
+
+
+/* CONTAINERS */
+#preHeaderContainer {
+  padding-top: 28px;
+  padding-bottom: 6px;
+}
+
+#emailContainer {
+	margin: 38px auto 12px;
+  box-shadow: 0 2px {{ page.color_background_body_border }};
+	{% if page.header_border_radius %}
+	  border-radius: {{ page.header_border_radius }};
+  {% endif %}
+}
+
+#paperContainer {
+  {% if page.post_script_markup %}
+    padding-bottom: 6px;
+  {% else %}
+    padding-bottom: 12px;
+  {% endif %}
+}
+
+#headerImage {
+	{% if page.header_border_radius %}
+	  border-top-left-radius: {{ page.header_border_radius }};
+	  border-top-right-radius: {{ page.header_border_radius }};
+  {% endif %}
+}
+
+/* MOBILE STYLES */
+@media only screen and (max-width: 600px){
+  
+  table[id="emailContainer"] {
+    width: 96% !important;
+    margin-top: 12px !important;
+  }
+	
+	td[id="preHeaderContainer"],
+	td[id="preDateContainer"],
+	td[id="dateContainer"],
+	td[id="textContainer"],
+	td[id="callToActionContainer"],
+	td[id="postScriptContainer"],
+	td[id="contactContainer"],
+	td[id="ruleContainer"],
+	td[id="footerContainer"] {
+		padding-right: 16px !important;
+		padding-left: 16px !important;
+	}
+	
+	td[id="calloutContainer"] {
+  	padding-right: 0px !important;
+  	padding-left: 0px !important;
+	}
+	
+	table[id="calloutBlock"] {
+  	max-width: 100% !important;
+	}
+	
+	img[id="headerImage"] {
+  	max-width: 100% !important;
+	}
+	
+	td[id="dateBlockCell"] {
+  	letter-spacing: 0 !important;
+	}
+  
+}

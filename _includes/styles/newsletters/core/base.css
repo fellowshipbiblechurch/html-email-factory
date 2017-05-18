@@ -1,0 +1,348 @@
+/*	#	Base theme styles
+================================================== */
+
+{% if page.color_background_body %}
+html,
+body,
+#bodyTable {
+  background-color: {{ page.color_background_body }};
+}
+{% else %}
+html,
+body,
+#bodyTable {
+  background-color: #fff;
+}
+{% endif %}
+
+/* TYPOGRAPHY */
+h1, h1 a,
+h2, h2 a,
+h3, h3 a,
+h4, h4 a,
+h5, h5 a,
+h6, h6 a {
+	font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: {{ page.cta_color_button }};
+	text-align: left;
+	margin-top: 0.12em;
+	margin-bottom: 0.5em;
+}
+
+h1, h1 a {
+	font-size: 44px;
+	line-height: 115%;
+}
+
+h2, h2 a {
+	font-size: 38px;
+	line-height: 115%;
+}
+
+h3, h3 a {
+	font-size: 28px;
+	line-height: 115%;
+}
+
+h4, h4 a {
+	font-size: 21px;
+	line-height: 150%;
+}
+
+h5, h5 a {
+	font-size: 16px;
+	line-height: 130%;
+}
+
+h6, h6 a {
+	font-size: 14px;
+	line-height: 120%;
+}
+
+a {
+	color: {{ page.cta_color_button }}
+}
+
+ul {
+	list-style-position: outside;
+	line-height: 1.4;
+	margin: 1.4em 0;
+}
+
+sup {
+	font-size: 10px;
+}
+
+b, strong {
+  font-weight: 700;
+}
+
+/* CONTAINERS */
+#hiddenContainer {
+  display: none;
+  opacity: 0;
+}
+
+#emailContainer {
+	background-color: #fff;
+}
+
+{% if page.header_full_width %}
+  #headerContainer {
+  	background-color: {{ page.header_bg_color }};
+  }
+{% endif %}
+
+{% if page.header_has_border %}
+  #dateContainer {
+  	border-top: 4px solid {{ page.color_theme_primary }}
+  }
+{% endif %}
+
+#heroImageContainer {
+	background-color: #F0F0F0;
+}
+
+#introContainer {
+	background-color: #fff;
+}
+
+#callToActionContainer {
+	padding: {{ layout.content_padding }}px;
+}
+
+#textBlockCell #callToActionContainer {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+#preHeaderContainer,
+#dateContainer,
+#textContainer,
+#calloutContainer,
+#eventContainer,
+#contactContainer,
+#postScriptContainer,
+#footerContainer,
+#ruleContainer,
+#spacerContainer {
+	padding: {{ layout.content_padding }}px 0;
+}
+
+/* BLOCKS */
+
+/* BLOCK CELLS */
+#preHeaderBlockCell {
+	font-size: 12px;
+	color: #a2a2a2;
+}
+
+#dateBlockCell {
+	font-size: 12px;
+	text-transform: uppercase;
+	letter-spacing: .5px;
+	color: #a2a2a2;
+}
+
+#textBlockCell p:last-of-type {
+  margin-bottom: 0;
+}
+
+#calloutBlockCell {
+  background-color: {{ page.color_theme_primary }};
+  padding: {{ layout.email_width | minus: layout.content_width | divided_by: 2 }}px {{ layout.email_width | minus: layout.content_width }}px;
+  border-top: 2px solid {{ page.cta_color_button_border }};
+  border-bottom: 2px solid {{ page.cta_color_button_border }};
+  text-shadow: 0 1px 1px {{ page.cta_color_button_border }};
+}
+
+#calloutBlockCell .calloutBlockContent {
+  text-align: center;
+  color: {{ page.color_background_paper }};
+}
+
+#ruleBlockCell,
+#spacerContainer {
+	font-size: 0;
+	line-height: 0;
+}
+
+#ruleBlockCell {
+	border-top: 1px solid #e7e7e7;
+}
+
+#contactBlockCellPhoto {
+	padding-right: {{ layout.content_padding }}px;
+}
+
+#contactBlockCellName h4 {
+	margin: 0;
+}
+
+#footerBlockCell {
+	padding-bottom: 18px;
+}
+
+
+/* OTHER */
+.callToActionButton {
+	background-color: {{ page.cta_color_button }};
+	border-radius: 4px;
+	box-shadow: 0 3px {{ page.cta_color_button_border }};
+}
+
+.callToActionButtonContent {
+	padding: {{ layout.content_padding | divided_by: 1.333 }}px {{ layout.content_padding | times: 2.1 }}px;
+}
+
+.callToActionButtonContent a {
+	font-weight: bold;
+	color: #fff;
+	text-decoration: none;
+}
+
+.content {
+	font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 16px;
+	font-weight: normal;
+	color: #313030;
+	line-height: 1.4;
+}
+
+/* BITS AND PIECES */
+.postScript {
+	font-size: 14px;
+	color: #a2a2a2;
+	font-style: italic;
+}
+
+.list-header {
+  padding: 0 1px;
+  font-size: 12px;
+  font-weight: normal;
+  font-style: italic;
+  color: #67a7a8;
+  border-bottom: 2px solid #67a7a8;
+}
+
+.event-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 12px 0 6px;
+}
+
+.event-details {
+  margin: 0 0 38px;
+  padding-left: 21px;
+  font-size: 14px;
+  list-style-type: square;
+}
+
+.margin-clear {
+  margin: 0;
+}
+
+.footerTagLine {
+	font-size: 12px;
+	color: #9d9d9d;
+	padding: 0 90px;
+}
+
+.imageLink {
+  display: block;
+}
+
+.centered {
+  text-align: center;
+}
+
+.centered img {
+  margin: 0 auto;
+}
+
+.u-text--base { font-weight: normal; }
+.u-text--caps { text-transform: uppercase; }
+.u-text--tilt { font-style: italic; }
+.u-text--quiet { color: #a2a2a2; }
+.u-text--xs { font-size: 12px; }
+.u-text--sm { font-size: 14px; }
+
+/* MOBILE STYLES */
+@media only screen and (max-width: 600px){
+  
+  table[id="emailContainer"] {
+    width: 100% !important;
+  }
+	
+	td[id="preHeaderContainer"],
+	td[id="preDateContainer"],
+	td[id="dateContainer"],
+	td[id="textContainer"],
+  td[id="calloutContainer"],
+	td[id="callToActionContainer"],
+	td[id="postScriptContainer"],
+	td[id="contactContainer"],
+	td[id="ruleContainer"],
+	td[id="footerContainer"] {
+		padding-right: 10px !important;
+		padding-left: 10px !important;
+	}
+	
+	td[id="textBlockCell"] td[id="callToActionContainer"] {
+    padding-right: 0;
+    padding-left: 0;
+  }
+	
+	td[id="headerContainer"] {
+		height: auto !important;
+	}
+	
+	table[id="preHeaderBlock"],
+	table[id="preDateBlock"],
+	table[id="dateBlock"],
+	table[id="textBlock"],
+  table[id="calloutBlock"],
+	table[id="callToActionBlock"],
+	table[id="postScriptBlock"],
+	table[id="contactBlock"],
+	table[id="ruleBlock"],
+	table[id="footerBlock"] {
+		max-width: 480px !important;
+		width: 100% !important;
+	}
+	
+	td[id="calloutBlockCell"] {
+  	padding-right: 16px !important;
+  	padding-left: 16px !important;
+	}
+  
+  h1, h1 a { font-size: 34px !important; }
+  h2, h2 a { font-size: 28px !important; }
+  h3, h3 a { font-size: 24px !important; }
+  h4, h4 a { font-size: 18px !important; }
+	
+	img[id="headerImage"] {
+		height: auto !important;
+		max-width: {{ 480 | plus: layout.content_padding }}px !important;
+		width: 100% !important;
+	}
+	
+	td[class="callToActionContent"] {
+		text-align:left !important;
+	}
+	
+	table[class="callToActionButton"] {
+		width:100% !important;
+	}
+
+	td[class="footerContent"] {font-size:15px !important;}
+	td[class="footerContent"] a {display:block;}
+	
+	td[id="contactBlockCellName"] {
+		font-size: 16px;
+	}
+	
+	.footerTagLine {
+  	padding: 0 28px;
+	}
+}

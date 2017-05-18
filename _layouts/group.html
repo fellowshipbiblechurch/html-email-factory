@@ -12,7 +12,7 @@
 			<ul>
 				{% for newsletter in site.newsletters %}
 					{% for category in newsletter.categories %}
-						{% if category == page.group | strip %}
+						{% if category == page.group %}
 						  <li>
 						    <a href="{{ newsletter.url | prepend: site.baseurl }}">{{ newsletter.title }}</a>
 						  </li>
