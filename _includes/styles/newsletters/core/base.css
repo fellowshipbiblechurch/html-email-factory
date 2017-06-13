@@ -84,6 +84,7 @@ b, strong {
 }
 
 #emailContainer {
+  margin-top: 21px;
 	background-color: #fff;
 }
 
@@ -266,6 +267,19 @@ b, strong {
 .u-text--quiet { color: #a2a2a2; }
 .u-text--xs { font-size: 12px; }
 .u-text--sm { font-size: 14px; }
+
+.blockquote {
+	color: #6a6a6a;
+	padding: 18px 16px 19px;
+	background: #f6f6f6;
+	border-left: 3px solid #64a59f;
+	margin-bottom: 1.4em;
+}
+
+.blockquote h5,
+.blockquote h6 {
+	color: #585858;
+}
 
 /* MOBILE STYLES */
 @media only screen and (max-width: 600px){
