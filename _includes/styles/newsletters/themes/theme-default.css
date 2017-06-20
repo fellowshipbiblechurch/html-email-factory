@@ -1,0 +1,9 @@
+html, body, #bodyTable {
+	background-color: #fff;
+}
+
+@media only screen and (max-width: 500px){
+	#emailContainer {
+		margin-top: 0;
+	}	
+}

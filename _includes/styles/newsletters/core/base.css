@@ -29,6 +29,10 @@ h6, h6 a {
 	margin-bottom: 0.5em;
 }
 
+h5, h6 {
+	margin-bottom: 1.4em;
+}
+
 h1, h1 a {
 	font-size: 44px;
 	line-height: 115%;
