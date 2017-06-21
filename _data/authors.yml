@@ -59,3 +59,9 @@ rob_eric_jj:
  position: "Franklin Campus Pastors"
  campus: false
  image: false
+bobby_brown:
+ name: "Bobby Brown"
+ email: "bbrown@fbctn.org"
+ position: "Pastor of Students"
+ campus: "Franklin Campus"
+ image: "http://fellowshipbiblechurch.org/email-assets/headshots/boilerplate-abraham-lincoln-300px.png"

@@ -60,7 +60,7 @@ h5, h5 a {
 
 h6, h6 a {
 	font-size: 14px;
-	line-height: 120%;
+	line-height: 130%;
 }
 
 a {
@@ -149,7 +149,7 @@ b, strong {
 	color: #a2a2a2;
 }
 
-#textBlockCell p:last-of-type {
+#textBlockCell p:last-child {
   margin-bottom: 0;
 }
 
@@ -180,7 +180,9 @@ b, strong {
 	padding-right: {{ layout.content_padding }}px;
 }
 
-#contactBlockCellName h4 {
+#contactBlockCellName h4,
+#contactBlockCellName h5,
+#contactBlockCellName h6 {
 	margin: 0;
 }
 
@@ -230,17 +232,21 @@ b, strong {
   border-bottom: 2px solid #67a7a8;
 }
 
-.event-title {
+#event-title {
   font-size: 16px;
   font-weight: bold;
   margin: 12px 0 6px;
 }
 
-.event-details {
-  margin: 0 0 38px;
+#event-details {
+  margin: 0 0 1.4em;
   padding-left: 21px;
   font-size: 14px;
   list-style-type: square;
+}
+
+#event-details:last-child {
+	margin-bottom: 0;
 }
 
 .margin-clear {
@@ -271,6 +277,18 @@ b, strong {
 .u-text--quiet { color: #a2a2a2; }
 .u-text--xs { font-size: 12px; }
 .u-text--sm { font-size: 14px; }
+.u-flush {
+	margin: 0;
+	padding: 0;
+}
+.u-flush--t {
+	margin-top: 0;
+	padding-top: 0;
+}
+.u-flush--b {
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
 
 .blockquote {
 	color: #6a6a6a;
@@ -304,6 +322,16 @@ b, strong {
 	td[id="footerContainer"] {
 		padding-right: 10px !important;
 		padding-left: 10px !important;
+	}
+	
+	.blockquote td[id="textContainer"],
+  .blockquote td[id="calloutContainer"],
+	.blockquote td[id="callToActionContainer"],
+	.blockquote td[id="contactContainer"],
+	.blockquote td[id="ruleContainer"],
+	.blockquote td[id="footerContainer"] {
+		padding-right: 0 !important;
+		padding-left: 0 !important;
 	}
 	
 	td[id="textBlockCell"] td[id="callToActionContainer"] {
