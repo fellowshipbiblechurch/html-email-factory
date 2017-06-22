@@ -12,6 +12,7 @@ body,
 
 table {
 	border-collapse:collapse;
+	margin-bottom: 0;
 }
 
 img,

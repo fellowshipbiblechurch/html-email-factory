@@ -135,6 +135,16 @@ b, strong {
 }
 
 /* BLOCKS */
+#paperBlock,
+#preHeaderBlock,
+#dateBlock,
+#textBlock,
+#calloutBlock,
+#contactBlock,
+#footerBlock {
+	margin-bottom: 0;
+}
+
 
 /* BLOCK CELLS */
 #preHeaderBlockCell {
