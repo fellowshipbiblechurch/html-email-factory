@@ -330,8 +330,8 @@ b, strong {
 	td[id="contactContainer"],
 	td[id="ruleContainer"],
 	td[id="footerContainer"] {
-		padding-right: 10px !important;
-		padding-left: 10px !important;
+		padding-right: 16px !important;
+		padding-left: 16px !important;
 	}
 	
 	.blockquote td[id="textContainer"],
