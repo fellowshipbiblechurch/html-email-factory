@@ -134,6 +134,12 @@ b, strong {
 	padding: {{ layout.content_padding }}px 0;
 }
 
+/*
+#textContainer {
+	padding-bottom: 0 !important;
+}
+*/
+
 /* BLOCKS */
 #paperBlock,
 #preHeaderBlock,
@@ -288,16 +294,16 @@ b, strong {
 .u-text--xs { font-size: 12px; }
 .u-text--sm { font-size: 14px; }
 .u-flush {
-	margin: 0;
-	padding: 0;
+	margin: 0 !important;
+	padding: 0 !important;
 }
 .u-flush--t {
-	margin-top: 0;
-	padding-top: 0;
+	margin-top: 0 !important;
+	padding-top: 0 !important;
 }
 .u-flush--b {
-	margin-bottom: 0;
-	padding-bottom: 0;
+	margin-bottom: 0 !important;
+	padding-bottom: 0 !important;
 }
 
 .blockquote {
