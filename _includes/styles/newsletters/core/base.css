@@ -2,15 +2,15 @@
 ================================================== */
 
 {% if page.color_background_body %}
-html,
-body,
-#bodyTable {
+#bodyTable,
+#hiddenContainer {
   background-color: {{ page.color_background_body }};
 }
 {% else %}
 html,
 body,
-#bodyTable {
+#bodyTable,
+#hiddenContainer {
   background-color: #fff;
 }
 {% endif %}
@@ -83,8 +83,11 @@ b, strong {
 
 /* CONTAINERS */
 #hiddenContainer {
-  display: none;
+  display: none !important;
   opacity: 0;
+  font-size: 0;
+  color: {{ page.color_background_body }};
+  height: 0px;
 }
 
 #emailContainer {
@@ -92,11 +95,13 @@ b, strong {
 	background-color: #fff;
 }
 
-{% if page.header_full_width %}
-  #headerContainer {
+#headerContainer {
+	{% if page.header_full_width %}
   	background-color: {{ page.header_bg_color }};
-  }
-{% endif %}
+	{% else %}
+  	background-color: {{ page.color_background_body }};
+	{% endif %}
+}
 
 {% if page.header_has_border %}
   #dateContainer {
@@ -215,10 +220,11 @@ b, strong {
 }
 
 .callToActionButtonContent {
-	padding: {{ layout.content_padding | divided_by: 1.333 }}px {{ layout.content_padding | times: 2.1 }}px;
+	padding: {{ layout.content_padding | divided_by: 1.333 }}px {{ layout.content_padding | times: 2.1 }}px !important;
+	color: #fff !important;
 }
 
-.callToActionButtonContent a {
+.callToActionButtonLink {
 	font-weight: bold;
 	color: #fff;
 	text-decoration: none;
