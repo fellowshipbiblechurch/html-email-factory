@@ -4,6 +4,7 @@
 {% assign position = author.position %}
 {% assign campus = author.campus %}
 {% assign image = author.image %}
+{% assign signature = author.signature %}
 
 <tr>
 	<!-- BEGIN CONTACT -->
@@ -14,6 +15,14 @@
 					<td align="left" valign="top" id="contactBlockCell">
 						<table border="0" cellpadding="0" cellspacing="0">
               <tbody>
+	              {% if signature %}
+		              <tr>
+			              <td align="left" valign="middle" class="content">
+				              <img width="100" src="{{ signature }}" />
+				              <p><em>({{ name }})</em></p>
+			              </td>
+		              </tr>
+	              {% endif %}
 	              <tr>
 		              {% if image != false %}
 		              	{% assign nameBlockWidth = 450 %}

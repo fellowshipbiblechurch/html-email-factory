@@ -23,7 +23,7 @@ h4, h4 a,
 h5, h5 a,
 h6, h6 a {
 	font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
-	color: {{ page.cta_color_button }};
+	color: {{ page.color_theme_primary }};
 	text-align: left;
 	margin-top: 0.12em;
 	margin-bottom: 0.5em;
@@ -64,7 +64,7 @@ h6, h6 a {
 }
 
 a {
-	color: {{ page.cta_color_button }}
+	color: {{ page.color_link_primary }}
 }
 
 ul {
@@ -117,6 +117,10 @@ b, strong {
 	background-color: #fff;
 }
 
+#imageContainer {
+	padding: 0;
+}
+
 #callToActionContainer {
 	padding: {{ layout.content_padding }}px;
 }
@@ -150,6 +154,7 @@ b, strong {
 #preHeaderBlock,
 #dateBlock,
 #textBlock,
+#imageBlock,
 #calloutBlock,
 #contactBlock,
 #footerBlock {

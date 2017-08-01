@@ -50,6 +50,10 @@ content_width: 540
       							        {%include snippets/text-block.html content=page.post_script_markup %}
       							      {% endif %}
         							    
+      							      {% if page.post_script_image_block_url %}
+      							        {%include snippets/image-block.html url=page.post_script_image_block_url full_width=true %}
+      							      {% endif %}
+        							    
         					  		</tbody>
         				  		</table>
     					  		</td>

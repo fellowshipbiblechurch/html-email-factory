@@ -20,8 +20,12 @@
   {% if page.post_script_markup %}
     padding-bottom: 6px;
   {% else %}
-    padding-bottom: 12px;
+    padding-bottom: 0;
   {% endif %}
+}
+
+#paperContainer tr:last-child #contactContainer {
+	padding-bottom: {{ layout.content_padding | plus: 12 }}px;
 }
 
 #headerImage {

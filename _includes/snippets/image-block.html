@@ -1,0 +1,23 @@
+{% assign image_is_full_width = include.full_width | default: false %}
+
+{% if image_is_full_width == true %}
+  {% assign image_width = layout.email_width %}
+{% else %}
+  {% assign image_width = layout.content_width %}
+{% endif %}
+
+<tr>
+	<!-- BEGIN IMAGE BLOCK -->
+	<td align="center" valign="top" id="imageContainer">
+		<table border="0" cellpadding="0" cellspacing="0" width="{{ image_width }}" id="imageBlock">
+			<tbody>
+				<tr>
+					<td align="center" valign="middle" id="imageBlockCell">
+            <img src="{{ include.url }}" width="{{ image_width }}" />
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</td>
+	<!-- END IMAGE BLOCK -->
+</tr>
