@@ -35,8 +35,8 @@ content_width: 540
         					  		<tbody>
         							    
       							      {% if page.pre_date_markup %}
-      							        {%include snippets/text-block.html content=page.pre_date_markup %}
-      							        {%include snippets/horizontal-rule.html padding='0' %}
+      							        {% include snippets/text-block.html content=page.pre_date_markup %}
+      							        {% include snippets/horizontal-rule.html padding='0' %}
       							      {% endif %}
         						  		
         									{% include snippets/text-block.html content=page.date_to_send name="date" align_content="right" %}
@@ -46,8 +46,8 @@ content_width: 540
         							    {% include scaffold/author.html %}
         							    
       							      {% if page.post_script_markup %}
-      							        {%include snippets/horizontal-rule.html padding='0' %}
-      							        {%include snippets/text-block.html content=page.post_script_markup %}
+      							        {% include snippets/horizontal-rule.html padding='0' %}
+      							        {% include snippets/text-block.html content=page.post_script_markup %}
       							      {% endif %}
         							    
       							      {% if page.post_script_image_block_url %}
