@@ -84,3 +84,9 @@ carol_worsham:
  position: "Student Ministries Administrator"
  campus: "Brentwood Campus"
  image: false
+leann_buck:
+ name: "Leann Buck"
+ email: "lbuck@fbctn.org"
+ position: "Fellowship Kids Administrator & Coordinator"
+ campus: "Franklin Campus"
+ image: false
