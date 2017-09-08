@@ -50,12 +50,13 @@
 	td[id="callToActionContainer"],
 	td[id="postScriptContainer"],
 	td[id="contactContainer"],
-	td[id="ruleContainer"],
 	td[id="footerContainer"] {
 		padding-right: 16px !important;
 		padding-left: 16px !important;
 	}
 	
+	td[id="ruleContainer"],
+	td[id="callToActionContainer"],
 	td[id="calloutContainer"] {
   	padding-right: 0px !important;
   	padding-left: 0px !important;

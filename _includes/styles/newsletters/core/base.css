@@ -16,17 +16,26 @@ body,
 {% endif %}
 
 /* TYPOGRAPHY */
-h1, h1 a,
-h2, h2 a,
-h3, h3 a,
-h4, h4 a,
-h5, h5 a,
-h6, h6 a {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
 	font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	color: {{ page.color_theme_primary }};
 	text-align: left;
 	margin-top: 0.12em;
 	margin-bottom: 0.5em;
+}
+
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+	color: {{ page.color_link_primary }};
 }
 
 h5, h6 {
@@ -139,7 +148,8 @@ b, strong {
 #postScriptContainer,
 #footerContainer,
 #ruleContainer,
-#spacerContainer {
+#spacerContainer,
+#imageContainer {
 	padding: {{ layout.content_padding }}px 0;
 }
 
@@ -276,6 +286,15 @@ b, strong {
 	margin-bottom: 0;
 }
 
+.image__caption {
+	font-size: 12px !important;
+	color: #8a8a8a !important;
+	font-weight: normal;
+	font-style: italic;
+	margin-top: 6px;
+	margin-bottom: 0;
+}
+
 .margin-clear {
   margin: 0;
 }
@@ -316,6 +335,12 @@ b, strong {
 	margin-bottom: 0 !important;
 	padding-bottom: 0 !important;
 }
+.u-flush--y {
+	margin-top: 0 !important;
+	margin-bottom: 0 !important;
+	padding-top: 0 !important;
+	padding-bottom: 0 !important;
+}
 
 .blockquote {
 	color: #6a6a6a;
@@ -345,7 +370,6 @@ b, strong {
 	td[id="callToActionContainer"],
 	td[id="postScriptContainer"],
 	td[id="contactContainer"],
-	td[id="ruleContainer"],
 	td[id="footerContainer"] {
 		padding-right: 16px !important;
 		padding-left: 16px !important;
@@ -379,7 +403,8 @@ b, strong {
 	table[id="postScriptBlock"],
 	table[id="contactBlock"],
 	table[id="ruleBlock"],
-	table[id="footerBlock"] {
+	table[id="footerBlock"],
+	table[id="imageBlock"] {
 		max-width: 480px !important;
 		width: 100% !important;
 	}
@@ -394,7 +419,8 @@ b, strong {
   h3, h3 a { font-size: 24px !important; }
   h4, h4 a { font-size: 18px !important; }
 	
-	img[id="headerImage"] {
+	img[id="headerImage"],
+	img[id="imageBlockCellImage"] {
 		height: auto !important;
 		max-width: {{ 480 | plus: layout.content_padding }}px !important;
 		width: 100% !important;

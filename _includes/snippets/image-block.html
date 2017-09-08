@@ -1,10 +1,16 @@
 {% assign image_is_full_width = include.full_width | default: false %}
 
-{% if image_is_full_width == true %}
-  {% assign image_width = layout.email_width %}
+{% if include.width %}
+	{% assign image_width = include.width %}
 {% else %}
-  {% assign image_width = layout.content_width %}
+	{% if image_is_full_width == true %}
+	  {% assign image_width = layout.email_width %}
+	{% else %}
+	  {% assign image_width = layout.content_width %}
+	{% endif %}
 {% endif %}
+
+
 
 <tr>
 	<!-- BEGIN IMAGE BLOCK -->
@@ -13,7 +19,8 @@
 			<tbody>
 				<tr>
 					<td align="center" valign="middle" id="imageBlockCell">
-            <img src="{{ include.url }}" width="{{ image_width }}" />
+            <img id="imageBlockCellImage" src="{{ include.url }}" width="{{ image_width }}" />
+            <h6 class="image__caption">{{ include.caption }}</h6>
 					</td>
 				</tr>
 			</tbody>

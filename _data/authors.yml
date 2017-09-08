@@ -75,7 +75,7 @@ will_heydel:
 greg_joiner:
  name: "Dr. Greg Joiner"
  email: "gjoiner@fbctn.org"
- position: "Student Ministries Pastor"
+ position: "Fellowship Student Ministries Pastor"
  campus: "Brentwood Campus"
  image: "http://1a35adac855f40326ab5-545fc5a361402074649dd8b0f6e40b7d.r37.cf2.rackcdn.com/uploaded/s/0e6537730_1504710159_staff-greg-joiner-email-180px.png"
 carol_worsham:
@@ -90,3 +90,9 @@ leann_buck:
  position: "Fellowship Kids Administrator & Coordinator"
  campus: "Franklin Campus"
  image: false
+jeff_runion:
+ name: "Jeff Runion"
+ email: "jrunion@fbctn.org"
+ position: "Fellowship Men, Discipleship & Leadership Development Pastor"
+ campus: "Brentwood Campus"
+ image: "http://1a35adac855f40326ab5-545fc5a361402074649dd8b0f6e40b7d.r37.cf2.rackcdn.com/uploaded/s/0e6542484_1504820042_staff-jeff-runion-email-180px.png"

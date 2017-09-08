@@ -1,6 +1,6 @@
-{% if layout == 'default' %}
+{% if page.layout == 'default' %}
   {% assign default_padding = layout.content_padding | append: 'px' %}
-{% elsif layout == 'paper' %}
+{% elsif page.layout == 'paper' %}
   {% assign default_padding = layout.content_padding | append: 'px 0px' %}
 {% endif %}
 
