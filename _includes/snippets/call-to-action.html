@@ -1,3 +1,15 @@
+{% if include.url %}
+	{% assign url = include.url %}
+{% else %}
+	{% assign url = page.cta_url %}
+{% endif %}
+
+{% if include.text %}
+	{% assign text = include.text %}
+{% else %}
+	{% assign text = page.cta_text %}
+{% endif %}
+
 <tr>
 	<!-- BEGIN CALL TO ACTION -->
 	<td align="center" valign="top" id="callToActionContainer" width="{{ layout.content_width }}">
@@ -7,7 +19,7 @@
           <table border="0" cellpadding="0" cellspacing="0" class="callToActionButton">
             <tr>
               <td align="center" valign="top" class="content callToActionButtonContent">
-                <a class="callToActionButtonLink" href="{{ page.cta_url }}?utm_source=f1&utm_medium=email&utm_campaign={{ page.title }}&utm_content=cta" target="_blank" title="{{ page.title_public }}">{{ page.cta_text }}</a>
+                <a class="callToActionButtonLink" href="{{ url }}?utm_source=f1&utm_medium=email&utm_campaign={{ page.title }}&utm_content=cta" target="_blank" title="{{ page.title_public }}">{{ text }}</a>
               </td>
             </tr>
           </table>
