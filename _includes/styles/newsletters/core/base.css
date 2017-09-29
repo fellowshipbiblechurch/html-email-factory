@@ -220,6 +220,10 @@ b, strong {
 	border-top: 1px solid #e7e7e7;
 }
 
+#imageBlockCellLink {
+	display: block;
+}
+
 #contactBlockCellSignature {
 	padding-bottom: 12px;
 }

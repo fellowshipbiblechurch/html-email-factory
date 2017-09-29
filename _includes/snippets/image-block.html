@@ -19,8 +19,19 @@
 			<tbody>
 				<tr>
 					<td align="center" valign="middle" id="imageBlockCell">
+						{% if include.image_is_link %}
+							<a id="imageBlockCellLink" href="{{ include.link_url }}"{% if include.image_description %} title="{{ include.image_description }}"{% endif %}>
+						{% endif %}
+						
             <img id="imageBlockCellImage" src="{{ include.url }}" width="{{ image_width }}" />
-            <h6 class="image__caption">{{ include.caption }}</h6>
+            
+            {% if include.image_is_link %}
+            	</a>
+						{% endif %}
+						
+            {% if include.caption %}
+	            <h6 class="image__caption">{{ include.caption }}</h6>
+	          {% endif %}
 					</td>
 				</tr>
 			</tbody>
