@@ -371,7 +371,7 @@ b, strong {
 	color: #6a6a6a;
 	padding: 18px 16px 19px;
 	background: #f6f6f6;
-	border-left: 3px solid #64a59f;
+	border-left: 3px solid {{ page.color_theme_primary }};
 	margin-bottom: 1.4em;
 }
 

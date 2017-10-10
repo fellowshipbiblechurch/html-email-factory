@@ -116,3 +116,12 @@ larry_kayser:
  campus: "Fellowship Bible Church"
  image: "http://1a35adac855f40326ab5-545fc5a361402074649dd8b0f6e40b7d.r37.cf2.rackcdn.com/uploaded/s/0e6603104_1506628147_staff-larry-kayser-email-180px.png"
  signature: false
+rob_sweet:
+ name: "Rob Sweet"
+ email: "rsweet@fbctn.org"
+ position: "Lead Pastor"
+ campus: "Fellowship Bible Church"
+ image: "http://1a35adac855f40326ab5-545fc5a361402074649dd8b0f6e40b7d.r37.cf2.rackcdn.com/uploaded/s/0e6633142_1507657257_staff-rob-sweet-email-180px.png"
+#  signature:
+#   src: "http://1a35adac855f40326ab5-545fc5a361402074649dd8b0f6e40b7d.r37.cf2.rackcdn.com/uploaded/s/0e6633331_1507657640_staff-signature-rob-sweet-300px.png"
+#   width: 150
