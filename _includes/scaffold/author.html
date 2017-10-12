@@ -2,6 +2,8 @@
 {% assign name = author.name %}
 {% assign email = author.email %}
 {% assign position = author.position %}
+{% assign position_secondary = author.position_secondary %}
+{% assign position_tertiary = author.position_tertiary %}
 {% assign campus = author.campus %}
 {% assign image = author.image %}
 {% assign signature_src = author.signature.src %}
@@ -43,6 +45,14 @@
 										</h4>
 										{% if position %}
 											{{ position }}
+											<br>
+										{% endif %}
+										{% if position_secondary %}
+											{{ position_secondary }}
+											<br>
+										{% endif %}
+										{% if position_tertiary %}
+											{{ position_tertiary }}
 											<br>
 										{% endif %}
 										{% if campus %}
